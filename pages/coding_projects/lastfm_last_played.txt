@@ -1,0 +1,24 @@
+Most recently listening to:
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="language" content="en" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<div id="songname"></div>
+<div id="songartist"> by </div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+ $.ajax({
+  type: "GET",
+  dataType: "xml",
+  url: "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=joosthemoos&api_key=f2ab7867b0ba44a257ceb3ceeecb8d27&limit=1",
+  success: function(xml){
+   $(xml).find("recenttracks").each(function(){
+    $("#songname").append($(this).contents().filter("track").contents().filter("name").text());
+    $("#songartist").append($(this).contents().filter("track").contents().filter("artist").text() + "<br />");
+   });
+  }
+ });
+});
+</script>
+<br>
+<br>

@@ -1,0 +1,127 @@
+
+body {
+    height: 125vh;
+    /*background-image: url('https://cdn.hipwallpaper.com/i/75/76/5yt0Rg.jpg');*/
+    background-image: url('https://wallpapershome.com/images/pages/pic_h/6592.jpg');
+    background-size: cover;
+    font-family: sans-serif;
+    color: white;
+    font-size: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+body a{
+  color: pink;
+}
+  /* Add a dark blue background color to the top navigation */
+header {
+  background-color: #203a63;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  display: flex;
+  height: 80px;
+  box-shadow: 0 0 25px 0 black;
+}
+
+h1 {
+  color: white;
+  font-size: 50px;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+}
+
+main {
+  color: white;
+  text-align: center;
+}
+
+   header * {
+     display: inline;
+   }
+
+   header li {
+     margin: 20px;
+   }
+
+  /* Style the links inside the navigation bar */
+  header li a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: sans-serif;
+  }
+
+  /* Change the color of links on hover */
+  header li a:hover:not(.active) {
+    background-color: #8d9799;
+    color: white;
+    font-family: sans-serif;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+  /* Add a color to the active/current link */
+
+  header .active {
+    background-color: #4cbdcf;
+    color: white;
+    font-family: sans-serif;
+    height: 80px;
+    border-radius: 5px 5px 5px 5px;
+  }
+
+  /* button */
+  button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #203a63;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 25px 0 black;
+
+  }
+  .card {
+  background-color: rgba(255,255,255,0.3);
+  color: #9ca7b8;
+  padding: 40px;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 10px 10px 10px 10px;
+
+}
+
+  .card h2{
+
+  }
+  .card p{
+
+    /*text-align: left;*/
+  }
+  .card h4{
+    color: white;
+    font-style: italic;
+  }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="sitestyle.css">
+  </head>
+  <body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a>
+            <li><a href="../pages/coding.html">Coding</a>
+            <li><a class="active" href="../pages/space.html">Space</a>
+            <li><a href="../pages/linguistics.html">Linguistics</a>
+            <li><a href="../pages/misc.html">Other Ventures</a>
+            <li><a href="../pages/about.html">About</a>
+          </ul>
+        </nav>
+      </header>
+  <main>
+    <h1>Space</h1>
+    <img src="space_projects/capsules.png" alt="Man, the Mercury capsule. What a time." height="300">
+    <p>I am a pretty big space fan and I enjoy doing various projects relating
+    to aerospace. I also have a lot of opinions about the commercial aerospace
+    industry specifically, so I guess they might pop up on here once in a while.</p><br>
+
+    <div class="card" id="ahfe_comms">
+        <h2>Redesigned <i>Mercury</i> Comms Display</h2>
+        <h4>Fall 2020</h4>
+        <p>As part of the Aerospace Human Factors Engineering course, taught by
+          Prof. Mike Massimino (our resident astronaut and cool guy), our goal for
+           the course was to work on redesigning a subsystem of the <i>Mercury</i> spacecraft.
+           For what it's worth, the <i>Mercury</i> spacecraft was not very-well designed,
+           and technology has advanced in almost every field such that many of the
+           systems they had at the time could be rendered obsolete.</p>
+
+        <p> My partner and I chose to redesign the communications display.
+          Several problems with the initial communications system were that it
+          relied on ground stations for connection (which resulted in frequent
+          blackouts), it did not warn astronauts of approaching losses-of-signal
+          or when they would acquire it, and knowing whether the audio/telemetry
+          sending was on or off was anyone's guess. It was also not clear whether
+          the audio was off due to a scheduled blackout or a system malfunction.</p>
+
+        <p> Our solution was to revamp the display to include color-coded indicators
+          for various system states, as well as countdowns until LOS and AOS. The
+          issue of frequent blackouts is solved at a system level, wherein the
+          audio signal connects to geostationary TDRSS satellites which have
+          long been the standard of communication in space. </p>
+          <p>The Python files are found <a href="https://github.com/joosthemoos/misc-projects/tree/master/Python/NLP/PANIC%20(Pronoun%20Auditor%20Nastily%20Inflicting%20Charges)" target="_blank">here</a>.
+            This space display demo uses tkinter and Pillow. The colors of the indicators are as follows:
+            <li> Green: audio/telemetry transmitting as normal
+            <li> Yellow: audio is manually turned off by operator
+            <li> Turquoise: audio/telemetry not sending due to a scheduled blackout
+            <li> Red: audio/telemetry not sending due to a systems failure
+        </p>
+
+        <p> As part of our project, we also had to design a human factors-focused
+          experiment in order to test the usability and workload of the system.</p>
+
+    </div>
+
+  </main>
+</body>
+</html>

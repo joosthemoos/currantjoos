@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <title>Other Ventures</title>
+  <head>
+    <link rel="stylesheet" href="sitestyle.css">
+  </head>
+  <body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a>
+            <li><a href="../pages/coding.html">Coding</a>
+            <li><a href="../pages/space.html">Space</a>
+            <li><a href="../pages/linguistics.html">Linguistics</a>
+            <li><a class="active" href="../pages/misc.html">Other Ventures</a>
+            <li><a href="../pages/about.html">About</a>
+          </ul>
+        </nav>
+      </header>
+  <main>
+    <h1>Other Ventures</h1>
+    <img src="misc_projects/poi.PNG" alt="A retractable poi design I made." height="300">
+    <p>I have a lot of varied interests that do not necessarily fit on the other
+      pages. This includes music, performing arts, 3D and CAD design, and more!
+    </p>
+
+    <div class="card" id="dynamic">
+      <h2>Learning what a "static website" means</h2>
+      <h4>January 2022</h4>
+      <p>Languages/toolkits used: HTML, JQuery, probably something else</p>
+      <img src="misc_projects/rip_static_websites.png" width="1000" height="450" alt="What things would have looked like, sort of.">
+      <p>Ah, how the mighty have fallen! In an attempt to personalize my website, I have had some
+        ups, some downs, and now a complete full-stop to a project I had been hoping to implement.
+      </p>
+      <p>I have recently been using this wonderful scrobbler called LastFM(found at last.fm) to track my music taste.
+      For those unfamiliar, a scrobbler is a program that scrapes your specified music-streaming services and
+      tracks the songs. LastFM also gives you data on the genre, how your listening has changed over time, and
+      other truly excellent statistics.</p>
+      <p>For the purposes of my website's homepage, I really wanted to add a section showing my most recently listened-to
+        song - however, I had no idea how to implement this. A couple of hours later learning about how JQuery handles
+        HTTP requests and much trial and error parsing the XML file that LastFM returns, I got it! I had done it (picture
+        evidence shown above! I know I know, I could have just written "Yeah Right by Joji" and you would never have known
+        the difference, but <a href="misc_projects/lastfm_last_played.txt" target="_blank">please believe me</a>). So, success, right? WRONG!
+      </p>
+      <p>This is where GitHub Pages comes in. All is fine and well, it works locally, and I commit the code - and it doesn't
+      work in production. A quick Google Search tells me that GitHub Pages <i>cannot handle GET and PUT requests.</i> A TRAGEDY!</p>
+      <p>Was it all for naught? Potentially. Even if I did not get to actually implement it, what a fun project it was! It really makes
+      me think about what kind of websites I actually can create for myself, should I want to ever pay for a non-static website. I most
+      likely would want a website with a more aesthetically-pleasing implementation of my LastFM data - maybe even an embedded website
+      displaying some interesting visualization from another website; maybe I will add some kind of nice visuals of my own, perhaps a photo
+      gallery? Who knows what the future holds!</p>
+    </div>
+
+    <div class="card" id="poi">
+      <h2>Retractable Poi</h2>
+      <h4>Spring 2020</h4>
+      <p>During Spring of 2020, I took a Computer Graphics and Design course, which
+        was retrospectively one of the greatest decisions I have ever made. I have
+        worked with CAD a lot over the years for various projects, but I have never
+        had any formal training. Taught by Dr. Yesilevskiy, I learned valuable skills
+        for modeling all sorts of objects and I got hands-on experience that
+        still helps me to this day.
+      </p>
+      <p>The best part of this class was the final project, where we were simply told
+        to "find a problem in the world and fix it" with some kind of product.
+        I decided to focus on the flow arts, a subset of performing arts that
+         uses props that are swung, thrown, or spun. I more specifically focused on poi,
+         which are at a very basic level balls on strings that can be spun or thrown.
+      </p>
+      <p>Because typical poi spinners perform in often weird locations, it is a common
+        problem that they get lost or stolen, and because they are usually very expensive
+        (a pair of programmable LED poi can cost upwards of $220 USD), it can cause
+        financial burden on the spinner. I decided to remedy this problem by making
+        retractable poi that can be worn on the arm, then extended during spinning,
+        and then retracted later. It was a challenge to model, especially modeling
+        fabric, but it ended up being a product I was very proud of!
+      </p>
+      <p>For a clearer description of its purpose, design, and
+        function, check out my proposal <a href="misc_projects/CAD Final Project Report.pdf" target="_blank">here</a>.
+        <br>For some of the CAD files,
+        check out my GrabCAD here. Below is the (admittedly very not-serious)
+        pitch video that we were also tasked with creating!
+      </p>
+      <iframe width="420" height="315"
+      src="https://www.youtube.com/embed/Svj4Zi2KiCQ">
+    </iframe> <br>
+    </div>
+
+  </main>
+</body>
+</html>

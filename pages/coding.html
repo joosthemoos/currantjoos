@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <title>Coding</title>
+  <head>
+    <link rel="stylesheet" href="sitestyle.css">
+  </head>
+  <body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a>
+            <li><a class="active" href="../pages/coding.html">Coding</a>
+            <li><a href="../pages/space.html">Space</a>
+            <li><a href="../pages/linguistics.html">Linguistics</a>
+            <li><a href="../pages/misc.html">Other Ventures</a>
+            <li><a href="../pages/about.html">About</a>
+          </ul>
+        </nav>
+      </header>
+  <main>
+    <h1>Coding</h1>
+    <img src="coding_projects/coding.png" alt="Another xkcd? Probably." height = 200>
+    <p>Although I started coding HTML websites when I was in elementary school,
+    I took an extended break pretty much until the end of high school, when I
+    rediscovered my love for computer science and how easily applicable it is
+    to other things that I love. Now I have mildly more impressive projects
+    (I hope) than simply being able to Inspect-Element the Google homepage.</p>
+
+    <div class="card">
+      <h2>Speech Recognition: Pronunciation Assessment and Feedback Tool</h2>
+      <h4>Fall 2021</h4>
+      <p>Languages/toolkits used: Shell Scripting, Python, Kaldi, Google Cloud</p>
+      <p>As part of COMSW6998 Fundamentals of Speech Recognition, taught by Prof. Homayoon Beigi, we were tasked with creating a
+        speech recognition project using the open-source Kaldi toolkit. I decided to work on the issue of
+        pronunciation assessment using ASR methods, creating a rudimentary tool for speakers with highly-accented English speech
+        to assess their own pronunciation and get feedback for what sounds and words to work on.</p>
+        <p>This turns out to be mildly difficult to do (who knew!) but very fun to work with. The workflow I came up with was to
+          first have a model trained on a corpus of slightly-accented, sometimes nonnative English (based on the TED-LIUM corpus of English TED Talks)
+          that then gets force-aligned with a native English dataset (the LibriSpeech corpus of audiobooks). This alignment then
+          should produce a baseline that can represent highly-intelligible English. With this new model, data from a corpus of
+          highly-accented speech (the Speech Accent Archive) can be compared. Kaldi outputs decoded results in the form of lattices.
+          From lattices, the best path through the lattice determines which phone is present at a given time stamp, and the log likelihood
+          of this phone being correct is considered its "confidence". We extract these confidences, compare the phones to the transcript, and
+          then get a rating for each word! Below you can see what such an output would look like - for ease of reading and color-coding, I
+          outputted the results for each speaker in an RTF format.</p>
+          <img src="coding_projects/kaldi_output.png" width="1000" height="450" alt="Pronunciation assessment output">
+          <p>This project was very difficult for me, and there are still many places for it to improve, especially when it comes to proper
+            evaluation. Nevertheless, I learned so much, from gaining a hands-on understanding of signals processing and automatic speech
+            recognition, to working with shell scripting (and making such a gorgeous, stage-divided, with-flags-and-everything main script),
+            to working with very, very, unclean data. It's one of those projects where I could have been working on it forever but deadlines
+            happen and semesters end. Thanks again Prof. Beigi for an excellent class and a real challenge!
+      </p>
+      <p>If you would like to look at the code itself, please email me at jessica.kuleshov@columbia.edu. Otherwise, the paper
+      can be found <a href="coding_projects/sr_final_paper.pdf" target="_blank">here</a>.</p>
+    </div>
+
+    <div class="card">
+      <h2>A Better Way to Search Python Commands - Databases</h2>
+      <h4>Spring 2021</h4>
+      <p>Languages/toolkits used: Python, Flask, Jinja, PostgreSQL, Javascript, HTML, Google Cloud</p>
+      <img src="coding_projects/db_homepage.PNG" width="1000" height="450" alt="The full homepage!">
+      <p>There are many resources online for Python documentation, and they are highly convoluted and difficult to look through. Currently,
+        there does not seem to be any good website where you can easily search through methods, constants, modules, and packages, as well as have
+        a list of favorites and have the ability to take notes on your work.
+      </p>
+      <p>If you have been facing this problem as well, look no further! In Intro to Databases, together with <a href="https://www.linkedin.com/in/sedonathomas/" target="_blank">Sedona Thomas</a>,
+        a fellow Columbia CS student, we made a PostgreSQL database that manages Python packages, modules, constants, and methods. Each page on our front-end
+        contains a list of all of its constituents - Methods contains methods, Modules contains modules, and Constants contains constants, et cetera. People can
+        register as users and then login, which allows them to access add their own favorite methods/constants/packages, which they can then
+        access via the "About You" page (seen below). Users can also submit their own user code on the main page, and can view their submitted code on
+        the About You page as well. There are also multiple ways to search - either by keyword or by related keywords, or searching your
+        favorites. The Packages and Modules pages also have their own lookups, where you can find what each Package and Module contains. There is also a
+        Contributors page that lists every User who has contributed some User code to the database.
+      </p>
+      <img src="coding_projects/db_aboutyou.PNG" width="1000" height="450" alt="The About You page for Jess (that's me!)">
+      <p>The backend, as was mentioned previously, is a PostgreSQL database. The front-end is built on HTML and Javascript housed within the Jinja templates,
+        then accessed by a Python/Flask backend which queries the database. The entire project runs on a Google Cloud Linux node. There are also some features
+        of the database that are not accessible through the front-end, such as an added Notes functionality (where users can take notes regarding code they
+        feel needs more clarification).
+      </p>
+      <p>While doing this project, I certainly learned a lot, using many tools I have never had the chance to use before.
+        The directions we were given were just enough to get us started with running a Flask app and using SQL, but a lot of the commands Sedona and I
+        ended up figuring out through trial and error, and eventually we came up with a product that we are both quite happy with. I genuinely enjoyed
+        working on this project (despite on occasions unnecessarily short deadlines for certain parts of the project) and now I feel very comfortable
+        working with databases again, should I be presented with the opportunity!
+      </p>
+      <p>If you would like to look at the code for the database/front-end or have any other questions, please email me at jessica.kuleshov@columbia.edu.</p>
+    </div>
+
+
+    <div class="card">
+      <h2>Solving Puzzles and Games - Artificial Intelligence</h2>
+      <h4>March 2021</h4>
+      <p>Language used: Python</p>
+      <p>As part of the Artificial Intelligence class, led by Prof. Ansaf Salleb-Aouissi, we
+        completed a whole slew of mini-coding projects. For me, however, there were two that really stood
+        out in terms of their goal and in their complexity, and those were the projects focused on solving games.
+      </p>
+      <p>One of my favorite ones is a sudoku-solving algorithm that takes a string of 81 digits and solves the board.
+        This assignment focused on using a backtracking algorithm with a minimum-remaining-value (MRV) heuristic. Forward
+        checking was also employed to reduce the search space after every iteration. The code can either take in one 81-digit string
+        as input in the console or a .txt file as input, depending on whether an input is given or not, and is fairly quick - a maximum
+        of two seconds or so for the most complicated board!
+      </p>
+      <p> The other assignment was much more complicated and also quite satisfying to run - playing 2048. We were told to
+        think of solving 2048 with an adversarial search approach, where the computer's insertion of a 2 or a 4 is treated
+        as the adversary and you are the maximizing player. Using an expectiminimax algorithm with alpha-beta pruning, my
+        algorithm reached 2048 50% of the time and 1024 40% of the time, with the occasional 512 or 4096 (if I was lucky).
+        The only heuristic employed was the snake-weighting based on a paper from Nie, Hou, and An, which you can find <a href="http://cs229.stanford.edu/proj2016/report/NieHouAn-AIPlays2048-report.pdf" target="_blank">here</a>.
+      </p>
+      <p>If you would like to look at the code for either of these assignments, please email me at jessica.kuleshov@columbia.edu for access.
+    </div>
+
+    <div class="card">
+      <h2>Pronoun Checker</h2>
+      <h4>Jan. 2020 (ongoing)</h4>
+      <p>Language used: Python</p>
+      <p>Sometime in January I started getting annoyed that I wasn't always getting my
+        friends' pronouns correct, so I thought of methods to be able to correct myself
+        so that after some practice on my own I could respect people's pronouns.
+      </p>
+      <p>The result was this very basic pronoun checker (which is still in the works).
+        It uses the Python speech_recognition library and NLTK to be able to read in the
+        speaker's input sentence with a proper name, and then it searches for a correct
+        pronoun in the second sentence.
+      </p>
+      <p>Currently, it only works with male and female pronouns that are inputted in two
+        .txt files. The issue is that it cannot deal with uncertainty such as gender-neutral
+        names or rarer names. The ever-present issue of coreference resolution is also still there,
+        and at the time I did not understand that determining if the pronoun related to the noun is
+        actually a more difficult problem than I thought it was.
+      </p>
+      <p>Relevant files are found <a href="https://github.com/joosthemoos/misc-projects/tree/master/Python/NLP/PANIC%20(Pronoun%20Auditor%20Nastily%20Inflicting%20Charges)" target="_blank">here</a>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Brickbreaker</h2>
+      <h4>Summer 2019</h4>
+      <p>Language used: Python</p>
+      <p>As part of the introductory Python class I took at Stanford University,
+        one of our projects was to create a Brickbreaker game using their proprietary
+        GUI packages. The result is a fun game!<br><br>
+        Files can be found <a href="https://github.com/joosthemoos/misc-projects/tree/master/Python/Stanford%20Python%20Projects" target="_blank">here</a>.
+      </p>
+    </div>
+  </main>
+</body>
+</html>
